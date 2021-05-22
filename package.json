@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/polkadot-js/wasm",
+  "repository": "https://github.com/tetcoinjs/wasm",
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "Apache-2",
   "private": true,
@@ -7,21 +7,21 @@
     "packages/*"
   ],
   "resolutions": {
-    "@polkadot/dev": "^0.50.14",
+    "@tetcoin/dev": "^0.50.14",
     "babel-core": "^7.0.0-bridge.0",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "build": "./scripts/build.sh",
-    "lint": "polkadot-dev-run-lint",
+    "lint": "tetcoin-dev-run-lint",
     "clean": "./scripts/clean.sh",
-    "postinstall": "polkadot-dev-yarn-only",
+    "postinstall": "tetcoin-dev-yarn-only",
     "test": "./scripts/test-rust.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
-    "@polkadot/dev": "^0.50.14",
-    "@polkadot/util": "^2.5.1",
+    "@tetcoin/dev": "^0.50.14",
+    "@tetcoin/util": "^2.5.1",
     "override-require": "^1.1.1"
   }
 }

@@ -20,7 +20,7 @@ rm -rf ./build ./pkg
 
 # build new via nightly & wasm-pack
 echo "*** Building WASM output"
-rustup run nightly wasm-pack build --release --scope polkadot --target nodejs
+rustup run nightly wasm-pack build --release --scope tetcoin --target nodejs
 mv pkg build
 
 # optimise
@@ -52,13 +52,13 @@ sed -i -e 's/wasm = require/\/\/ wasm = require/g' $SRC_WASM
 sed -i -e 's/var wasm;/const crypto = require('\''crypto'\''); let wasm; const requires = { crypto };/g' $SRC_WASM
 sed -i -e 's/return addHeapObject(require(varg0));/return addHeapObject(requires[varg0]);/g' $SRC_WASM
 
-# this creates issues in both the browser and RN (@polkadot/util has a polyfill)
-sed -i -e 's/const TextEncoder = require('\''util'\'')\.TextEncoder;/const { stringToU8a } = require('\''@polkadot\/util'\'');/g' $SRC_WASM
+# this creates issues in both the browser and RN (@tetcoin/util has a polyfill)
+sed -i -e 's/const TextEncoder = require('\''util'\'')\.TextEncoder;/const { stringToU8a } = require('\''@tetcoin\/util'\'');/g' $SRC_WASM
 sed -i -e 's/let cachedTextEncoder = new /\/\/ let cachedTextEncoder = new /g' $SRC_WASM
 sed -i -e 's/cachedTextEncoder\.encode/stringToU8a/g' $SRC_WASM
 
-# this creates issues in both the browser and RN (@polkadot/util has a polyfill)
-sed -i -e 's/const TextDecoder = require('\''util'\'')\.TextDecoder;/const { u8aToString } = require('\''@polkadot\/util'\'');/g' $SRC_WASM
+# this creates issues in both the browser and RN (@tetcoin/util has a polyfill)
+sed -i -e 's/const TextDecoder = require('\''util'\'')\.TextDecoder;/const { u8aToString } = require('\''@tetcoin\/util'\'');/g' $SRC_WASM
 sed -i -e 's/let cachedTextDecoder = new /\/\/ let cachedTextDecoder = new /g' $SRC_WASM
 sed -i -e 's/cachedTextDecoder\.decode/u8aToString/g' $SRC_WASM
 

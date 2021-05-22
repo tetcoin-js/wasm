@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const config = require('@polkadot/dev/config/jest');
+const config = require('@tetcoin/dev/config/jest');
 
 module.exports = Object.assign({}, config, {
   moduleNameMapper: {
-    '@polkadot/wasm-(schnorrkel)(.*)$': '<rootDir>/packages/wasm-$1/src/$2'
+    '@tetcoin/wasm-(schnorrkel)(.*)$': '<rootDir>/packages/wasm-$1/src/$2'
   },
   modulePathIgnorePatterns: [
     '<rootDir>/packages/wasm-schnorrkel/build'

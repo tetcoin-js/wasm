@@ -39,7 +39,7 @@ jobs:
       run: |
         rustup toolchain install nightly
         yarn install --immutable | grep -v 'YN0013'
-        yarn polkadot-ci-ghact-build
+        yarn tetcoin-ci-ghact-build
 
   dummy:
     name: Dummy

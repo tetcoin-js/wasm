@@ -16,7 +16,7 @@
 
 # 0.20.1 Jan 30, 2020
 
-- Pull in schnorrkel 0.8.5 for full Substrate 2.x compatibility
+- Pull in schnorrkel 0.8.5 for full Tetcore 2.x compatibility
 
 # 0.14.1 Sep 09, 2019
 
@@ -28,7 +28,7 @@
 
 # 0.12.1 Jul 17, 2019
 
-- Remove deprecated `@polkadot/wasm-schnorrkel` & `@polkadot/wasm-dalek-ed25519` source (all combined in `@polkadot/wasm-crypto`, was kept for historical purposes)
+- Remove deprecated `@tetcoin/wasm-schnorrkel` & `@tetcoin/wasm-dalek-ed25519` source (all combined in `@tetcoin/wasm-crypto`, was kept for historical purposes)
 - Security dependency bumps
 - Updated Rust `hex-literal` for recent versions of the compiler (used in tests only)
 
@@ -38,7 +38,7 @@
 
 # 0.10.1 May 09, 2019
 
-- w3f/schnorrkel updated to 0.1.1 as per substrate
+- w3f/schnorrkel updated to 0.1.1 as per tetcore
 - Added known subkey signature test (Rust & JS)
 
 # 0.9.1 Apr 29, 2019
@@ -47,7 +47,7 @@
 
 # 0.8.1 Mar 31, 2019
 
-- Pull ed25519 & sr25519 into `@polkadot/wasm-crypto` as well (smaller final size)
+- Pull ed25519 & sr25519 into `@tetcoin/wasm-crypto` as well (smaller final size)
 - Disable build/publish of `wasm-dalek-ed25519` & `wasm-schnorrkel`
 - Improve error messaging, instead of `__wasm_malloc of null`
 

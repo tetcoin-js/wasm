@@ -1,1 +1,1 @@
-module.exports = require('@polkadot/dev/config/babel');
+module.exports = require('@tetcoin/dev/config/babel');

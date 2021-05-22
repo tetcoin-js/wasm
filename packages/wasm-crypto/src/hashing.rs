@@ -168,7 +168,7 @@ pub mod tests {
 
 	// // Constructs the message that Ethereum RPC's `personal_sign` and `eth_sign` would sign.
 	// fn ethereum_signable_message(data: &[u8]) -> Vec<u8> {
-	// 	let prefix = b"Pay DOTs to the Polkadot account:";
+	// 	let prefix = b"Pay DOTs to the Tetcoin account:";
 	// 	let mut l = prefix.len() + data.len();
 	// 	let mut rev = Vec::new();
 	// 	let mut v = b"\x19Ethereum Signed Message:\n".to_vec();

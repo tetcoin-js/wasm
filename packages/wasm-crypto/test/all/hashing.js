@@ -5,7 +5,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 // @ts-check
 
-const { assert, stringToU8a, u8aToHex } = require('@polkadot/util');
+const { assert, stringToU8a, u8aToHex } = require('@tetcoin/util');
 
 function blake2bHash (wasm) {
   const hash = u8aToHex(wasm.blake2b(stringToU8a('abc'), new Uint8Array(), 64));

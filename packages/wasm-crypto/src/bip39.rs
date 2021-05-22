@@ -92,7 +92,7 @@ pub mod tests {
 	#[test]
 	fn can_bip39_mini_secret() {
 		let phrase = "legal winner thank year wave sausage worth useful legal winner thank yellow";
-		let password = "Substrate";
+		let password = "Tetcore";
 		let mini = hex!("4313249608fe8ac10fd5886c92c4579007272cb77c21551ee5b8d60b78041685");
 		let result = ext_bip39_to_mini_secret(phrase, password);
 

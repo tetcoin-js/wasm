@@ -5,7 +5,7 @@
 // of the Apache-2.0 license. See the LICENSE file for details.
 // @ts-check
 
-const { assert, u8aToHex } = require('@polkadot/util');
+const { assert, u8aToHex } = require('@tetcoin/util');
 
 function bip39_generate (wasm) {
   const RESULT = wasm.bip39Generate(21);
@@ -32,7 +32,7 @@ function bip39_toEntropy (wasm) {
 }
 
 function bip39_toMiniSecret (wasm) {
-  const RESULT = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Substrate'));
+  const RESULT = u8aToHex(wasm.bip39ToMiniSecret('legal winner thank year wave sausage worth useful legal winner thank yellow', 'Tetcore'));
 
   console.log('\tMIN', RESULT);
 
