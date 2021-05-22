@@ -37,13 +37,13 @@ Changes:
 
 ## 3.0.1 Dec 13, 2020
 
-**Important** This assumes `@polkadot/util` 5+ peerDependencies
+**Important** This assumes `@tetcoin/util` 5+ peerDependencies
 **Important** While this package contains no external interface changes, it doe now compile and ship both cjs and esm modules. This means that modern bundlers will have more information for tree-shaking available. Additionally when using Node with `.mjs` extensions, the esm version imports will be used on recent Node versions. Adding an export map, as here, may have some impacts so a major semver bump is advised. There may be (small) dragons hiding in the dark corners...
 
 Changes:
 
 - Build and expose both cjs and esm via exports map
-- Split wasm and asmjs files into the `@polkadot/wasm-crypto-{wasm,asmjs}` packages
+- Split wasm and asmjs files into the `@tetcoin/wasm-crypto-{wasm,asmjs}` packages
 - Add fflate WASM compression, with 180K raw savings (37K over-the-wire)
 - Convert the package to full TypeScript sources
 
@@ -53,7 +53,7 @@ Changes:
 Changes:
 
 - Rework generation of WASM interfaces (proper cross-platform JS support)
-- Remove explicit `crypto` dependency, this is now applied by `@polkadot/x-randomvalues`
+- Remove explicit `crypto` dependency, this is now applied by `@tetcoin/x-randomvalues`
 - Build via xargo for panic abort, an overall small sizes without stack (Pinned nightly)
 - Move Rust library sources in to `rs/` subfolder
 
@@ -126,7 +126,7 @@ Changes:
 
 Changes:
 
-- Remove deprecated `@polkadot/wasm-schnorrkel` & `@polkadot/wasm-dalek-ed25519` source (all combined in `@polkadot/wasm-crypto`, was kept for historical purposes)
+- Remove deprecated `@tetcoin/wasm-schnorrkel` & `@tetcoin/wasm-dalek-ed25519` source (all combined in `@tetcoin/wasm-crypto`, was kept for historical purposes)
 - Security dependency bumps
 - Updated Rust `hex-literal` for recent versions of the compiler (used in tests only)
 
@@ -142,7 +142,7 @@ Changes:
 
 Changes:
 
-- w3f/schnorrkel updated to 0.1.1 as per substrate
+- w3f/schnorrkel updated to 0.1.1 as per tetcore
 - Added known subkey signature test (Rust & JS)
 
 
@@ -157,7 +157,7 @@ Changes:
 
 Changes:
 
-- Pull ed25519 & sr25519 into `@polkadot/wasm-crypto` as well (smaller final size)
+- Pull ed25519 & sr25519 into `@tetcoin/wasm-crypto` as well (smaller final size)
 - Disable build/publish of `wasm-dalek-ed25519` & `wasm-schnorrkel`
 - Improve error messaging, instead of `__wasm_malloc of null`
 

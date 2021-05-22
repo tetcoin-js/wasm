@@ -3,8 +3,8 @@
 
 import './detectPackage';
 
-import { asmJsInit } from '@polkadot/wasm-crypto-asmjs';
-import { wasmBytes } from '@polkadot/wasm-crypto-wasm';
+import { asmJsInit } from '@tetcoin/wasm-crypto-asmjs';
+import { wasmBytes } from '@tetcoin/wasm-crypto-wasm';
 
 import { allocString, allocU8a, getWasm, initWasm, resultString, resultU8a, withWasm } from './bridge';
 import * as imports from './imports';

@@ -1,5 +1,5 @@
 {
-  "extends": "@polkadot/dev/config/tsconfig.json",
+  "extends": "@tetcoin/dev/config/tsconfig.json",
   "exclude": [
     "build/**/*",
     "**/build/**/*"
@@ -7,13 +7,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@polkadot/wasm-crypto-asmjs": [ "packages/wasm-crypto-asmjs/src/data" ],
-      "@polkadot/wasm-crypto-wasm": [ "packages/wasm-crypto-wasm/src/data" ],
-      "@polkadot/wasm-crypto": [ "packages/wasm-crypto/src" ]
+      "@tetcoin/wasm-crypto-asmjs": [ "packages/wasm-crypto-asmjs/src/data" ],
+      "@tetcoin/wasm-crypto-wasm": [ "packages/wasm-crypto-wasm/src/data" ],
+      "@tetcoin/wasm-crypto": [ "packages/wasm-crypto/src" ]
     },
     "skipLibCheck": true,
     "typeRoots": [
-      "./node_modules/@polkadot/ts",
+      "./node_modules/@tetcoin/ts",
       "./node_modules/@types"
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "repository": "https://github.com/polkadot-js/wasm",
+  "repository": "https://github.com/tetcoinjs/wasm",
   "author": "Jaco Greeff <jacogr@gmail.com>",
   "license": "Apache-2",
   "private": true,
@@ -11,20 +11,20 @@
   },
   "scripts": {
     "build": "yarn build:wasm",
-    "build:release": "polkadot-ci-ghact-build",
+    "build:release": "tetcoin-ci-ghact-build",
     "build:wasm": "./scripts/build.sh",
-    "lint": "polkadot-dev-run-lint",
+    "lint": "tetcoin-dev-run-lint",
     "clean": "./scripts/clean.sh",
-    "postinstall": "polkadot-dev-yarn-only",
+    "postinstall": "tetcoin-dev-yarn-only",
     "test": "yarn test:wasm:rust",
     "test:wasm:js": "yarn test:wasm:js:jest && yarn test:wasm:js:node",
-    "test:wasm:js:jest": "polkadot-dev-run-test ./test/jest.spec.js",
+    "test:wasm:js:jest": "tetcoin-dev-run-test ./test/jest.spec.js",
     "test:wasm:js:node": "cd packages/wasm-crypto && node ./test/wasm.js && node ./test/asm.js",
     "test:wasm:rust": "cd packages/wasm-crypto && RUST_BACKTRACE=full cargo test --release -- --nocapture"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@polkadot/dev": "^0.61.26",
+    "@tetcoin/dev": "^0.61.26",
     "fflate": "^0.6.3",
     "override-require": "^1.1.1"
   },

@@ -13,8 +13,8 @@ use schnorrkel::{
 };
 use wasm_bindgen::prelude::*;
 
-// We must make sure that this is the same as declared in the substrate source code.
-const SIGNING_CTX: &'static [u8] = b"substrate";
+// We must make sure that this is the same as declared in the tetcore source code.
+const SIGNING_CTX: &'static [u8] = b"tetcore";
 
 /// ChainCode construction helper
 fn create_cc(data: &[u8]) -> ChainCode {

@@ -16,7 +16,7 @@
 //
 // With the above we additionally need a .d.ts to just export the packageInfo
 
-import { detectPackage } from '@polkadot/util';
+import { detectPackage } from '@tetcoin/util';
 
 import { packageInfo } from './packageInfo';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@polkadot/wasm-crypto-wasm",
+  "name": "@tetcoin/wasm-crypto-wasm",
   "version": "3.2.3",
   "description": "Wasm content for wasm-crypto",
   "browser": "data.js",
@@ -10,8 +10,8 @@
   "maintainers": [],
   "contributors": [],
   "license": "Apache-2.0",
-  "bugs": "https://github.com/polkadot-js/wasm/issues",
-  "homepage": "https://github.com/polkadot-js/wasm",
+  "bugs": "https://github.com/tetcoinjs/wasm/issues",
+  "homepage": "https://github.com/tetcoinjs/wasm",
   "dependencies": {
     "@babel/runtime": "^7.12.13"
   }

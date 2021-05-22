@@ -3,7 +3,7 @@
 
 /* eslint-disable camelcase */
 
-const { assert, u8aToHex } = require('@polkadot/util');
+const { assert, u8aToHex } = require('@tetcoin/util');
 
 function bip39_generate (wasm) {
   const res = wasm.bip39Generate(21);

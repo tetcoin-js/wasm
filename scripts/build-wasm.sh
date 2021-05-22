@@ -21,7 +21,7 @@ cd ..
 
 echo "*** Converting to WASM"
 ../bindgen/wasm-bindgen wasm-crypto/target/wasm32-unknown-unknown/release/wasm.wasm --out-dir bytes --target web
-# wasm-pack build --release --scope polkadot --target web
+# wasm-pack build --release --scope tetcoin --target web
 
 # optimise
 echo "*** Optimising WASM output"

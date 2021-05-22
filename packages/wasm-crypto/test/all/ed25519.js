@@ -4,7 +4,7 @@
 /* eslint-disable camelcase */
 
 const crypto = require('crypto');
-const { assert, hexToU8a, stringToU8a, u8aToHex } = require('@polkadot/util');
+const { assert, hexToU8a, stringToU8a, u8aToHex } = require('@tetcoin/util');
 
 function extractKeys (pair) {
   return [pair, pair.slice(32), pair.slice(0, 32)];

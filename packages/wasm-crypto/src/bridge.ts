@@ -5,7 +5,7 @@
 
 import type { AsmCreator, WasmCryptoInstance } from './types';
 
-import { assert, stringToU8a, u8aToString } from '@polkadot/util';
+import { assert, stringToU8a, u8aToString } from '@tetcoin/util';
 
 let wasm: WasmCryptoInstance | null = null;
 let cachegetInt32: Int32Array | null = null;
@@ -23,7 +23,7 @@ export async function initWasm (wasmBytes: Uint8Array | null, asmFn: AsmCreator 
     if (asmFn) {
       wasm = asmFn(wbg);
     } else {
-      console.error('FATAL: Unable to initialize @polkadot/wasm-crypto');
+      console.error('FATAL: Unable to initialize @tetcoin/wasm-crypto');
       console.error(error);
 
       wasm = null;
@@ -35,7 +35,7 @@ export async function initWasm (wasmBytes: Uint8Array | null, asmFn: AsmCreator 
 // Alas, TypeScript foo is not that great today, so we sadly have an extra closure here
 export function withWasm <T, F extends (...params: never[]) => T> (fn: (wasm: WasmCryptoInstance) => F): F {
   return ((...params: never[]): T => {
-    assert(wasm, 'The WASM interface has not been initialized. Ensure that you wait for the initialization Promise with waitReady() from @polkadot/wasm-crypto (or cryptoWaitReady() from @polkadot/util-crypto) before attempting to use WASM-only interfaces.');
+    assert(wasm, 'The WASM interface has not been initialized. Ensure that you wait for the initialization Promise with waitReady() from @tetcoin/wasm-crypto (or cryptoWaitReady() from @tetcoin/util-crypto) before attempting to use WASM-only interfaces.');
 
     return fn(wasm)(...params);
   }) as unknown as F;
